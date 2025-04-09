@@ -8,7 +8,7 @@ En el mundo de la IA existen dos clases de datos, los etiquetados y los no etiqu
 |120|2|2|
 |110|3|2.5|
 
-y 
+y las etiquetas serían los precios de venta. Dados los datos, queremos predecir de manera automática las etiquetas. Las etiquetas pueden ser valores contínuos como el precio, temperatura o velocidad; lo más común es que sean tomadas de una lista, como `[positivo, negativo, neutro]`.
 
 ## Algoritmos de centroides
 ## Algoritmos de densidad
