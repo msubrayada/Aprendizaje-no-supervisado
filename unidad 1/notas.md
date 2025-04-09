@@ -14,7 +14,28 @@ Los datos no etiquetados también pueden ser usados para extraer información. L
 
 ## Algoritmos de centroides
 
+Los algorimos de centroides son los más usados y buscan puntos especiales que se usan para separar al espacio de acuerdo a su distancia. La noción de similaridad será dada por una función distancia, la más usual es la distancia euclidiana. 
+
+Dado un conjunto de datos ${x_1, \ldots, x_m}$, el objetivo es encontrar $k$ centroides ${c_1, \ldots, c_k}$ para minimizar
+
+$$ O = \sum _{i=1} ^{m}\min_j(d(x_i, c_j))$$
+
+donde $d$ es la función distancia.
+
+Queremos minimizar la distancia de cada punto a su representante (centroide) más cercano. Para esto, se hace el siguiente proceso iterativo:
+1. Se eligen $k$ centroides de alguna manera (generalmente al azar)
+2. Se asignan los datos a su centroide más cercano y así se crean los clusters $c_1, \ldots, c_k$
+3. De cada cluster $c_i$, se elige el representante óptimo que minimiza la función
+
+$$ \sum_{x\in C_i}d(x, c_i)$$
+
+que se puede hacer tomando el promedio de los puntos del cluster.
+
+Esto se repite hasta que los centroides cambian menos que un umbral establecido.
+
 
 ## Algoritmos de densidad
 
 ## Evaluación del agrupamiento
+
+
